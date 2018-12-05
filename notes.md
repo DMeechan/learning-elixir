@@ -9,8 +9,10 @@
 
 ### Pattern Matching
 
-- To extract values from a tuple: { hand, rest_of_deck } = split_deck
+- To extract values from a tuple: { hand, rest_of_deck } = split_deck:
 - => where `split_deck = { [hand], [rest of deck] }`
+- You've gotta match the structure of the data you're trying to pattern match against:
+- => example: `[ colour1, colour2 ] = [ "blue", "green" ]`
 
 ### Standard library
 
