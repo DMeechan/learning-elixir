@@ -138,7 +138,7 @@ end
 
 - Lists are written with square brackets: [1, 2, 3] or ["Apple", "Pear"]
 - Tuples are written with curly brackets: {1, 2}
-- An **atom** (or **symbol**) is like an enum in Java. They are atomic units that you can compare values against (like Strings). For example, a file read operation might return the status `:ok` or `:error`. Those are symbols / atoms.
+- An **atom** (or **symbol** as it's called in Ruby) is like an enum in Java. They are atomic units that you can compare values against (like Strings). For example, a file read operation might return the status `:ok` or `:error`. Those are symbols / atoms.
 
 You can use the **pipe operator** to make your code less repetetive. It pipes the output from one function into the next function. Note that it gets piped into the first argument.
 
@@ -163,6 +163,23 @@ def create_hand(hand_size) do
 
 - Create a 'cards' project with `mix new cards`
 - Compile your project with `iex -S mix`
+- To install your dependencies, run `mix deps.get`
+
+## Package Management with Mix and Hex
+
+- Dependencies are stored in your `mix.exs` file inside the private `deps` function
+- To add a dependency, add a tuple to the array in this format: `{:name, "~> version"}`
+- Then run the command specified in the *Command line* section above
+
+For example:
+
+```ruby
+  defp deps do
+    [
+      {:ex_doc, "~> 0.12.0"}
+    ]
+  end
+```
 
 ## Functional Programming & Project Design
 
