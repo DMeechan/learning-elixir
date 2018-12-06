@@ -1,4 +1,4 @@
-# Cards
+# Cards (auto generated)
 
 **TODO: Add description**
 

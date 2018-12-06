@@ -1,5 +1,7 @@
 # Learning Elixir & Phoenix
 
+I'm learning Elixir & Phoenix and here are my notes. Enjoy!
+
 ## Elixir
 
 Elixir code gets transpiled into Erlang, which is then compiled and executed on the BEAM *(Bogdan's Erlang Abstract Machine)*.
