@@ -173,6 +173,8 @@ def create_hand(hand_size) do
 
 There are a couple more key data structures to know about in Elixir: `maps` and `keyword lists`.
 
+Elixir also has a `struct` data structure.
+
 ##### What's a map?
 
 A map is a collection of key-value pairs. This is like a HashMap in Java or an object in JavaScript. Here's a JavaScript vs Elixir example:
@@ -233,6 +235,26 @@ Here we've cut out two things:
 Also notice how that second example makes it look like a map of key-value pairs. **That is not the case.**
 
 It's a list of tuples. So if you need to find the data with the key `language`, you'll have to look through all the tuples in order to find it. You can't just access it directly like in a map. It's kinda like searching for something in an unsorted array :(
+
+##### What's a struct?
+
+A struct is way to store structured data in Elixir. It's like a map, but you declare every property. You can't just add any old property to a struct (but you could do that to a map). This also means you can assign default values and it has extra compile-time checking.
+
+So how do you make a struct?
+
+```ruby
+defmodule Identicon.Image do
+  defstruct hex: nil
+end
+```
+
+In the example above, we define a *module* called `Identicon.Image`. Then we've created a struct inside it called `hex` and assigned it the default value `nil`.
+
+How can we use the `hex` struct?
+
+```ruby
+%Identicon.Image{hex: OUR_VALUE}
+```
 
 ### ExDoc comments
 

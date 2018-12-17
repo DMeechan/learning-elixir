@@ -30,10 +30,10 @@ Here's the process:
 Now let's have a look at that process in detail:
 
 1. Get a String input
-2. Compute an MD5 hash from the String
+2. Compute an MD5 hash binary list (a list of binary values: 0 - 255) from the String
 3. List of numbers
-4. Pick a colour
-5. Build a grid of squares
+4. Pick a colour (first three values in the hash's binary list)
+5. Build a grid of squares (even values will be coloured; odd values will be white)
 6. Convert the grid into an image
 7. Save the image to a file
 
