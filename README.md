@@ -34,6 +34,22 @@ case status do
 end
 ```
 
+When you do **inline functions**, you usually remove the brackets and put the function contents on a newline (like in a JavaScript callback). For example:
+
+```ruby
+def do_st-uff(things) do
+  Enum.filter things, fn(item) ->
+    {_name, index} = item
+    rem(index, 2) == 0
+  end
+
+  # We can even do pattern matching inside the parameters of the inline function:
+  Enum.filter things fn({_name, index}) -> 
+    rem(index, 2) == 0
+  end
+end
+```
+
 ### Pattern Matching
 
 - To extract values from a tuple: { hand, rest_of_deck } = split_deck:
@@ -442,4 +458,13 @@ For example:
 
 ## Phoenix
 
-Phoenix
+### What is Phoenix?
+
+### How does Phoenix work?
+
+To understand how Phoenix works, we need to understand the process that takes place when an event occurs.
+
+So let's have a look at what Phoenix does when someone sends a eequest to your website:
+
+1. User sends a request for a resource 
+2. Router receives the request, inspects it, and then sends it off to a specific part of the app - done inside `router.ex`
