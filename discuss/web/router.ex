@@ -17,13 +17,22 @@ defmodule Discuss.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", TopicController, :index
+    resources "/topics", TopicController
 
-    get "/topics", TopicController, :index
-    get "/topics/new", TopicController, :new
-    post "/topics", TopicController, :create
-    # delete "/topics/id", TopicController, :delete
-    get "/topics/:id/edit", TopicController, :edit
-    put "/topics/:id", TopicController, :update
+    # THE RESOURCES TAG ABOVE CONDENSES ALL OF THESE CRUD OPS (below)
+    # INTO A SINGLE LINE OF CODE
+    # ASSUMING WE'RE FOLLOWING CRUD API CONVENTIONS
+
+    # READ
+    # get "/topics", TopicController, :index
+    # get "/topics/new", TopicController, :new
+    # get "/topics/:id/edit", TopicController, :edit
+
+    # CREATE, UPDATE, DELETE
+    # post "/topics", TopicController, :create
+    # delete "/topics/:id", TopicController, :delete
+    # put "/topics/:id", TopicController, :update
+
   end
 
   # Other scopes may use custom stacks.
