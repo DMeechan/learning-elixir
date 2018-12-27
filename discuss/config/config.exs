@@ -24,6 +24,7 @@ config :logger, :console,
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
+import_config "config.secret.exs"
 import_config "#{Mix.env}.exs"
 
 config :ueberauth, Ueberauth,
@@ -32,9 +33,10 @@ config :ueberauth, Ueberauth,
   ]
 
 config :ueberauth, Ueberauth.Strategy.Github.Oauth,
-  client_id: "CLIENT_ID_HERE",
-  client_secret: "CLIENT_SECRET_HERE"
+  client_id: Application.get_env(:discuss, :github_client_id),
+  client_secret: Application.get_env(:discuss, :github_client_secret)
 
-# You can generate your GitHub OAuth application (to get an ID and secret)
-# From here:
-# https://github.com/settings/developers
+# Source on how to set up own *.secret.exs file
+# And then importing that:
+# https://stackoverflow.com/a/47223081
+
