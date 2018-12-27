@@ -25,3 +25,16 @@ config :logger, :console,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+config :ueberauth, Ueberauth,
+  providers: [
+    github: { Ueberauth.Strategy.Github, [] }
+  ]
+
+config :ueberauth, Ueberauth.Strategy.Github.Oauth,
+  client_id: "CLIENT_ID_HERE",
+  client_secret: "CLIENT_SECRET_HERE"
+
+# You can generate your GitHub OAuth application (to get an ID and secret)
+# From here:
+# https://github.com/settings/developers
