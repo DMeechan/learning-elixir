@@ -1,2 +1,3 @@
 *.dump
 .elixir_ls/
+/discuss/config/config.exs
