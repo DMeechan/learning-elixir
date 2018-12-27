@@ -4,6 +4,12 @@ defmodule Discuss.AuthController do
 
   alias Discuss.User
 
+  def signout(conn, _params) do
+    conn
+      |> configure_session(drop: true)
+      |> redirect(to: topic_path(conn, :index))
+  end
+
   def callback(%{assigns: %{ueberauth_auth: auth}} = conn, params) do
     user_params = %{
       token: auth.credentials.token,

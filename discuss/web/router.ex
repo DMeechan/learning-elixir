@@ -7,6 +7,7 @@ defmodule Discuss.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug Discuss.Plugs.SetUser # this is a module plug, not a function plug like the others above
   end
 
   pipeline :api do
@@ -38,6 +39,7 @@ defmodule Discuss.Router do
   scope "/auth", Discuss do
     pipe_through :browser
 
+    get "/signout", AuthController, :signout
     get "/:provider", AuthController, :request
     get "/:provider/callback", AuthController, :callback
   end
