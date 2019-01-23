@@ -23,3 +23,9 @@ Just pick your topic. Start learning. And start documenting (GitHub and Medium a
 Don't leave the documenting until the end - as the good ol' cliches say: it's about the journey, not the destination.
 
 Good luck, adventurer. It's a curious world out there if you look deep enough.
+
+## The resources I've made (so far)
+
+- [Elixir](./ELIXIR.md)
+- [Docker](./DOCKER.md) (work in progress)
+- [SQL](./SQL.md) (work in progress)
