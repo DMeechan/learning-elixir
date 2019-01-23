@@ -2,7 +2,7 @@
 
 I'm learning Elixir & Phoenix and here are my notes. Enjoy!
 
-> What's my primary source of knowledge for this?
+> What's your primary source of knowledge for this?
 
 Stephen Grider's fantastic Udemy course: [The Complete Elixir & Phoenix Bootcamp](https://www.udemy.com/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/?couponCode=4MORE1234)
 
