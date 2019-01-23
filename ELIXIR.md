@@ -2,6 +2,12 @@
 
 I'm learning Elixir & Phoenix and here are my notes. Enjoy!
 
+> What's my primary source of knowledge for this?
+
+Stephen Grider's fantastic Udemy course: [The Complete Elixir & Phoenix Bootcamp](https://www.udemy.com/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/?couponCode=4MORE1234)
+
+*Note: I've used the course link from Stephen's website so you'll get an 80% discount on the course. I think he gets a commission for that? I'm not sure. Either way, it's crazily good value :D*
+
 ## Elixir
 
 Elixir code gets transpiled into Erlang, which is then compiled and executed on the BEAM *(Bogdan's Erlang Abstract Machine)*.
