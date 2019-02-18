@@ -1,6 +1,6 @@
 defmodule Lispex.Parser do
 
-  @doc"""
+  @doc """
   Make a new subtree if we find a '('
   """
   def parse(["(" | tail], acc) do
@@ -8,21 +8,21 @@ defmodule Lispex.Parser do
     parse(rem_tokens, [sub_tree | acc])
   end
 
-  @doc"""
+  @doc """
   Accumulate the current sub tree in the parent tree, if we find a ')'
   """
   def parse([")" | tail], acc) do
     {tail, Enum.reverse(acc)}
   end
 
-  @doc"""
+  @doc """
   Roll back and start accumulating when we have no more tokens left
   """
   def parse([], acc) do
     Enum.reverse(acc)
   end
 
-  @doc"""
+  @doc """
   Start accumulating symbols and parse remaining tokens when we find a symbol
   """
   def parse([head | tail], acc) do
