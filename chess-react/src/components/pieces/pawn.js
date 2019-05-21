@@ -42,7 +42,7 @@ export default class Pawn extends Piece {
      * @param  {[type]} dest [description]
      * @return {[type]}      [description]
      */
-    getSrcToDestPath() {
+    getSrcToDestPath(src, dest) {
         if (dest === src - 16) {
             return [src - 8];
         }

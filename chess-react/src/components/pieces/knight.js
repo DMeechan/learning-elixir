@@ -5,8 +5,7 @@ const blackIcon = "https://upload.wikimedia.org/wikipedia/commons/e/ef/Chess_ndt
 
 export default class Knight extends Piece {
     constructor(player) {
-        const iconUrl = (player === 1) ? whiteIcon : blackIcon;
-        super(player, iconUrl);
+        super(player, (player === 1) ? whiteIcon : blackIcon);
     }
 
     isMovePossible(src, dest) {

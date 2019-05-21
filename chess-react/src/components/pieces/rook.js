@@ -21,7 +21,7 @@ export default class Rook extends Piece {
    * @param  {num} dest 
    * @return {[array]}      
    */
-    getSrcToDestPath() {
+    getSrcToDestPath(src, dest) {
         let path = [], pathStart, pathEnd, incrementBy;
 
         pathStart = (src > dest) ? dest : src;
