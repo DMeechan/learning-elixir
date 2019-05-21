@@ -1,4 +1,4 @@
-import Piece from '../piece';
+import Piece from './piece';
 
 const whiteIcon = "https://upload.wikimedia.org/wikipedia/commons/1/15/Chess_qlt45.svg";
 const blackIcon = "https://upload.wikimedia.org/wikipedia/commons/4/47/Chess_qdt45.svg";
