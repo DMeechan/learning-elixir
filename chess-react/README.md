@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Tutorial: https://www.techighness.com/post/develop-two-player-chess-game-with-react-js/
+
 ## Available Scripts
 
 In the project directory, you can run:
