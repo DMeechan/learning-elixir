@@ -1,0 +1,7 @@
+const CHATKIT_INSTANCE_LOCATOR = 'v1:us1:a68af1d8-09f8-43ff-aecd-979f8d430de9';
+const CHATKIT_TOKEN_PROVIDER_URL = 'http://localhost:4000/auth';
+
+export {
+  CHATKIT_INSTANCE_LOCATOR,
+  CHATKIT_TOKEN_PROVIDER_URL,
+};

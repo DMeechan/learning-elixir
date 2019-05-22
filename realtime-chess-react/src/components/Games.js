@@ -1,11 +1,10 @@
 import React from 'react';
 import { Segment, Grid } from 'semantic-ui-react';
-import { TokenProvider, ChatManager } from '@pusher/chatkit';
+import { TokenProvider, ChatManager } from '@pusher/chatkit-client';
 
 import Rooms from './Rooms';
-// import Chat from './Chat';
-
-const CHATKIT_INSTANCE_LOCATOR = 'v1:us1:a68af1d8-09f8-43ff-aecd-979f8d430de9';
+import Chat from './Chat';
+import constants, { CHATKIT_INSTANCE_LOCATOR, CHATKIT_TOKEN_PROVIDER_URL } from '../helpers/constants';
 
 export default class Games extends React.Component {
   state = {
@@ -18,7 +17,7 @@ export default class Games extends React.Component {
     this.chatManager = new ChatManager({
       instanceLocator: CHATKIT_INSTANCE_LOCATOR,
       tokenProvider: new TokenProvider({
-        url: 'htt[://localhost:4000/auth',
+        url: CHATKIT_TOKEN_PROVIDER_URL,
       }),
       userId: props.username,
     });
@@ -81,7 +80,7 @@ export default class Games extends React.Component {
       .catch(() => console.warn('Failed to enter room'));
   }
 
-  _leaveRoom() {
+  _leaveRoom(id) {
     const { currentUser } = this.state;
     currentUser
       .leaveRoom({ roomId: id })

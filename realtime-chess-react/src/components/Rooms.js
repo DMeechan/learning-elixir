@@ -2,7 +2,7 @@ import React from 'react';
 import { List, Icon, Header } from 'semantic-ui-react';
 
 export default function Rooms({ joined, joinable, activeRoom, enterRoom, leaveRoom }) {
-    const joinedRooms = joined.map(room => {
+    const joinedRooms = joined.map(room => (
         <List.Item key={room.id}>
             <List.Content floated='right'>
                 <a onClick={() => leaveRoom(room.id)}>
@@ -16,9 +16,9 @@ export default function Rooms({ joined, joinable, activeRoom, enterRoom, leaveRo
                 </a>
             </List.Content>
         </List.Item>
-    });
+    ));
 
-    const joinableRooms = joinable.map(room => {
+    const joinableRooms = joinable.map(room => (
         <List.Item key={room.id}>
             <Icon name='' />
             <List.Content>
@@ -27,7 +27,7 @@ export default function Rooms({ joined, joinable, activeRoom, enterRoom, leaveRo
                 </a>
             </List.Content>
         </List.Item>
-    });
+    ));
 
     return (
         <div>
