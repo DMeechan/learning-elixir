@@ -29,3 +29,5 @@ Good luck, adventurer. It's a curious world out there if you look deep enough.
 - [Elixir](./ELIXIR.md)
 - [Docker](./DOCKER.md) (work in progress)
 - [SQL](./SQL.md) (work in progress)
+
+> Still a big work in progress.
